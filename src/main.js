@@ -8,6 +8,7 @@ import './assets/style/reset.css'
 // 引入重置默认样式reset.css文件
 import './assets/style/border.css'
 // 引入解决移动端1px问题的文件
+import './assets/style/iconfont.css'
 
 Vue.config.productionTip = false
 fastClick.attach(document.body)
