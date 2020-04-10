@@ -30,8 +30,8 @@ export default {
     display flex
     height .86rem
     // background #00bcb4
-    background bgColor
-    // 使用varibles.styl的全局变量
+    background $bgColor
+    // 使用varibles.styl的全局变量  报错不生效
     color #fff
     line-height .86rem
     // 1rem = html font-size = 50px;

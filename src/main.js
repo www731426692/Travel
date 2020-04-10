@@ -10,6 +10,11 @@ import './assets/style/border.css'
 // 引入解决移动端1px问题的文件
 import './assets/style/iconfont.css'
 
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+// import style
+import 'swiper/css/swiper.css'
+Vue.use(VueAwesomeSwiper)
+
 Vue.config.productionTip = false
 fastClick.attach(document.body)
 // 将fastClick加载到页面中
