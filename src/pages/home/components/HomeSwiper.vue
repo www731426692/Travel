@@ -31,7 +31,9 @@ export default {
       swiperOptions: {
         //  swiper切换的参数配置见https://www.swiper.com.cn/api/autoplay/19.html
         // eslint-disable-next-line standard/object-curly-even-spacing
-        autoplay: { delay: 3000, stopOnLastSlide: false, disableOnInteraction: false},
+        autoplay: {
+          delay: 3000, stopOnLastSlide: false, disableOnInteraction: false
+        },
         paginationClickable: true,
         mousewheelControl: true,
         observeParents: true,
@@ -48,16 +50,16 @@ export default {
         // Some Swiper option/callback...
       }
     }
-  },
-  computed: {
-    swiper () {
-      return this.$refs.mySwiper.$swiper
-    }
-  },
-  mounted () {
-    console.log('Current Swiper instance object', this.swiper)
-    this.swiper.slideTo(3, 1000, false)
   }
+  // computed: {
+  //   swiper () {
+  //     return this.$refs.mySwiper.$swiper
+  //   }
+  // },
+  // mounted () {
+  //   console.log('Current Swiper instance object', this.swiper)
+  //   this.swiper.slideTo(3, 1000, false)
+  // }
 }
 </script>
 <style lang="stylus">
@@ -69,8 +71,9 @@ export default {
     overflow hidden
     width 100%
     height 0
+    // 不能写height 29%是因为height相对的是父级元素的高度，而不是width
     padding-bottom 29%
-    // 高度自动撑开width的29%
+    // 高度自动撑开父元素width的29%
     background #ccc
     //图片没有加载出来的时候显示一个很浅的灰色背景
     // .swiper-pagination-bullet-active
