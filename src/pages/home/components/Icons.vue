@@ -58,6 +58,7 @@ export default {
       iconList: [{
         id: '0001',
         imgUrl: require('../../../assets/image/writeTxt.png'),
+        // vue-cli与webpack本地静态路径出错导致图片不显示,通过require解决
         desc: '酒店'
       }, {
         id: '0002',
