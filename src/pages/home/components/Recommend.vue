@@ -23,51 +23,54 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgUrl: require('../../../assets/image/LH.jpg'),
-        title: '老虎滩海洋公园(5A)',
-        desc: '浪漫大连首站，浪漫的海洋主题乐园'
-      }, {
-        id: '002',
-        imgUrl: require('../../../assets/image/XH.jpg'),
-        title: '大连星海广场',
-        desc: '大连城市地标'
-      }, {
-        id: '003',
-        imgUrl: require('../../../assets/image/HC.jpg'),
-        title: '海昌发现王国',
-        desc: '体验惊险刺激的游戏设施'
-      }, {
-        id: '004',
-        imgUrl: require('../../../assets/image/KH.jpg'),
-        title: '星海湾跨海大桥',
-        desc: '海上地锚式悬索跨海大桥'
-      }, {
-        id: '005',
-        imgUrl: require('../../../assets/image/BC.jpg'),
-        title: '棒棰岛(4A)',
-        desc: '清澈神秘的海中孤岛'
-      }, {
-        id: '006',
-        imgUrl: require('../../../assets/image/BYS.jpg'),
-        title: '白玉山(4A)',
-        desc: '"登顶俯瞰旅顺港全景"'
-      }, {
-        id: '007',
-        imgUrl: require('../../../assets/image/ELS.jpg'),
-        title: '俄罗斯风情街',
-        desc: '"漫步俄式风情街区"'
-      }, {
-        id: '008',
-        imgUrl: require('../../../assets/image/SL.jpg'),
-        title: '大连森林动物园(4A)',
-        desc: '"在森林中与动物亲密接触"'
-      }]
-    }
+  props: {
+    recommendList: Array
   }
+  // data () {
+  //   return {
+  //     recommendList: [{
+  //       id: '001',
+  //       imgUrl: require('../../../assets/image/LH.jpg'),
+  //       title: '老虎滩海洋公园(5A)',
+  //       desc: '浪漫大连首站，浪漫的海洋主题乐园'
+  //     }, {
+  //       id: '002',
+  //       imgUrl: require('../../../assets/image/XH.jpg'),
+  //       title: '大连星海广场',
+  //       desc: '大连城市地标'
+  //     }, {
+  //       id: '003',
+  //       imgUrl: require('../../../assets/image/HC.jpg'),
+  //       title: '海昌发现王国',
+  //       desc: '体验惊险刺激的游戏设施'
+  //     }, {
+  //       id: '004',
+  //       imgUrl: require('../../../assets/image/KH.jpg'),
+  //       title: '星海湾跨海大桥',
+  //       desc: '海上地锚式悬索跨海大桥'
+  //     }, {
+  //       id: '005',
+  //       imgUrl: require('../../../assets/image/BC.jpg'),
+  //       title: '棒棰岛(4A)',
+  //       desc: '清澈神秘的海中孤岛'
+  //     }, {
+  //       id: '006',
+  //       imgUrl: require('../../../assets/image/BYS.jpg'),
+  //       title: '白玉山(4A)',
+  //       desc: '"登顶俯瞰旅顺港全景"'
+  //     }, {
+  //       id: '007',
+  //       imgUrl: require('../../../assets/image/ELS.jpg'),
+  //       title: '俄罗斯风情街',
+  //       desc: '"漫步俄式风情街区"'
+  //     }, {
+  //       id: '008',
+  //       imgUrl: require('../../../assets/image/SL.jpg'),
+  //       title: '大连森林动物园(4A)',
+  //       desc: '"在森林中与动物亲密接触"'
+  //     }]
+  //   }
+  // }
 }
 </script>
 
@@ -95,7 +98,7 @@ export default {
         .item-info
             // overflow hidden
             // flex布局下,溢出部分打点不起作用。
-            // 1、在父级设置overflow:hidden解决  2、在具备flex 1的层级下奖赏min-width 0
+            // 1、在父级设置overflow:hidden解决  2、在具备flex 1的层级下设置min-width 0
             min-width 0
             // 设置段落的最小宽度,溢出部分打点必须要设置宽度
             flex 1

@@ -1,10 +1,14 @@
 /* eslint-disable no-unused-vars */
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOptions" ref="mySwiper">
+    <swiper :options="swiperOptions" ref="mySwiper" v-if="showSwiper">
+      <!-- 传递过来的值如果是空数组,则swiper不会被创建【使用计算属性】 -->
       <!-- 通过v-bind实现父组件向子组件传值 -->
       <!-- option的值传递给swiper组件 -->
-      <swiper-slide>
+      <swiper-slide v-for="item of swiperList" v-bind:key="item.id">
+        <img v-bind:src="item.imgUrl" class="swiper-img" />
+      </swiper-slide>
+      <!-- <swiper-slide>
         <img src="../../../assets/image/img.png" class="swiper-img" />
       </swiper-slide>
       <swiper-slide>
@@ -15,10 +19,7 @@
       </swiper-slide>
       <swiper-slide>
         <img src="../../../assets/image/img.png" class="swiper-img" />
-      </swiper-slide>
-      <swiper-slide>
-        <img src="../../../assets/image/img.png" class="swiper-img" />
-      </swiper-slide>
+      </swiper-slide> -->
       <div class="swiper-pagination" slot="pagination"></div>
       <!-- 图片下面的点 -->
       <!-- 组件的一部分内容可以被父组件定制的时候，使用slot插槽 -->
@@ -28,6 +29,9 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    swiperList: Array
+  },
   data () {
     return {
       swiperOptions: {
@@ -54,6 +58,11 @@ export default {
         }
         // Some Swiper option/callback...
       }
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.swiperList.length
     }
   }
 }

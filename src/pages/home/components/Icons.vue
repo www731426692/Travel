@@ -53,46 +53,49 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    iconsList: Array
+  },
   data () {
     return {
-      iconList: [{
-        id: '0001',
-        imgUrl: require('../../../assets/image/writeTxt.png'),
-        // vue-cli与webpack本地静态路径出错导致图片不显示,通过require解决
-        desc: '酒店'
-      }, {
-        id: '0002',
-        imgUrl: require('../../../assets/image/bus.png'),
-        desc: '机票'
-      }, {
-        id: '0003',
-        imgUrl: require('../../../assets/image/freeTravel.png'),
-        desc: '火车票'
-      }, {
-        id: '0004',
-        imgUrl: require('../../../assets/image/lowFlight.png'),
-        desc: '景点门票'
-      }, {
-        id: '0005',
-        imgUrl: require('../../../assets/image/writeTxt.png'),
-        desc: '攻略'
-      }, {
-        id: '0006',
-        imgUrl: require('../../../assets/image/bus.png'),
-        desc: '汽车票船票'
-      }, {
-        id: '0007',
-        imgUrl: require('../../../assets/image/freeTravel.png'),
-        desc: '自由行'
-      }, {
-        id: '0008',
-        imgUrl: require('../../../assets/image/lowFlight.png'),
-        desc: '低价机票'
-      }, {
-        id: '0009',
-        imgUrl: require('../../../assets/image/lowFlight.png'),
-        desc: '低价机票'
-      }]
+      // iconList: [{
+      //   id: '0001',
+      //   imgUrl: require('../../../assets/image/writeTxt.png'),
+      //   // vue-cli与webpack本地静态路径出错导致图片不显示,通过require解决
+      //   desc: '酒店'
+      // }, {
+      //   id: '0002',
+      //   imgUrl: require('../../../assets/image/bus.png'),
+      //   desc: '机票'
+      // }, {
+      //   id: '0003',
+      //   imgUrl: require('../../../assets/image/freeTravel.png'),
+      //   desc: '火车票'
+      // }, {
+      //   id: '0004',
+      //   imgUrl: require('../../../assets/image/lowFlight.png'),
+      //   desc: '景点门票'
+      // }, {
+      //   id: '0005',
+      //   imgUrl: require('../../../assets/image/writeTxt.png'),
+      //   desc: '攻略'
+      // }, {
+      //   id: '0006',
+      //   imgUrl: require('../../../assets/image/bus.png'),
+      //   desc: '汽车票船票'
+      // }, {
+      //   id: '0007',
+      //   imgUrl: require('../../../assets/image/freeTravel.png'),
+      //   desc: '自由行'
+      // }, {
+      //   id: '0008',
+      //   imgUrl: require('../../../assets/image/lowFlight.png'),
+      //   desc: '低价机票'
+      // }, {
+      //   id: '0009',
+      //   imgUrl: require('../../../assets/image/lowFlight.png'),
+      //   desc: '低价机票'
+      // }]
     }
   },
   computed: {
@@ -100,7 +103,7 @@ export default {
     // eslint-disable-next-line vue/return-in-computed-property
     pages () {
       const pages = []
-      this.iconList.forEach((item, index) => {
+      this.iconsList.forEach((item, index) => {
         const page = Math.floor(index / 8)
         // floor函数取不大于index/8的最大整数
         // page只有两个值0与1   pages[0]与pages[1]刚进入判断都没有赋值,都为假

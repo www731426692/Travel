@@ -10,15 +10,19 @@
         输入城市/景点/游玩主题
       </div>
       <div class="header-right">
-        城市
+        <!-- 城市 -->
+        {{this.city}}
         <span class="iconfont arrow-icon">&#xe64a;</span></div>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: 'HomeHeader'
+  name: 'HomeHeader',
   // 输出模块命名为HomeHeader
+  props: {
+    city: String
+  }
 }
 
 </script>

@@ -2,7 +2,7 @@
     <div>
         <div class="title">假期去哪儿</div>
         <ul>
-            <li class="item border-bottom" v-for="item of recommendList" v-bind:key="item.id">
+            <li class="item border-bottom" v-for="item of weekendList" v-bind:key="item.id">
                 <div class="item-img-wrapper">
                     <img v-bind:src="item.imgUrl" class="item-img">
                 </div>
@@ -18,26 +18,29 @@
 <script>
 export default {
   name: 'HomeWeekend',
-  data () {
-    return {
-      recommendList: [{
-        id: '001',
-        imgUrl: require('../../../assets/image/GZRB.jpg'),
-        title: '世界梦号 广州出发',
-        desc: '畅游越南/菲律宾/日本'
-      }, {
-        id: '002',
-        imgUrl: require('../../../assets/image/OZH.jpg'),
-        title: '欧洲河轮游',
-        desc: '欧洲河之游，不识人间愁滋味'
-      }, {
-        id: '003',
-        imgUrl: require('../../../assets/image/SMJN.jpg'),
-        title: '美丽昆明',
-        desc: '水墨之滇,云裳之南'
-      }]
-    }
+  props: {
+    weekendList: Array
   }
+  // data () {
+  //   return {
+  //     recommendList: [{
+  //       id: '001',
+  //       imgUrl: require('../../../assets/image/GZRB.jpg'),
+  //       title: '世界梦号 广州出发',
+  //       desc: '畅游越南/菲律宾/日本'
+  //     }, {
+  //       id: '002',
+  //       imgUrl: require('../../../assets/image/OZH.jpg'),
+  //       title: '欧洲河轮游',
+  //       desc: '欧洲河之游，不识人间愁滋味'
+  //     }, {
+  //       id: '003',
+  //       imgUrl: require('../../../assets/image/SMJN.jpg'),
+  //       title: '美丽昆明',
+  //       desc: '水墨之滇,云裳之南'
+  //     }]
+  //   }
+  // }
 }
 </script>
 
