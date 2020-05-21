@@ -56,48 +56,48 @@ export default {
   props: {
     iconsList: Array
   },
-  data () {
-    return {
-      // iconList: [{
-      //   id: '0001',
-      //   imgUrl: require('../../../assets/image/writeTxt.png'),
-      //   // vue-cli与webpack本地静态路径出错导致图片不显示,通过require解决
-      //   desc: '酒店'
-      // }, {
-      //   id: '0002',
-      //   imgUrl: require('../../../assets/image/bus.png'),
-      //   desc: '机票'
-      // }, {
-      //   id: '0003',
-      //   imgUrl: require('../../../assets/image/freeTravel.png'),
-      //   desc: '火车票'
-      // }, {
-      //   id: '0004',
-      //   imgUrl: require('../../../assets/image/lowFlight.png'),
-      //   desc: '景点门票'
-      // }, {
-      //   id: '0005',
-      //   imgUrl: require('../../../assets/image/writeTxt.png'),
-      //   desc: '攻略'
-      // }, {
-      //   id: '0006',
-      //   imgUrl: require('../../../assets/image/bus.png'),
-      //   desc: '汽车票船票'
-      // }, {
-      //   id: '0007',
-      //   imgUrl: require('../../../assets/image/freeTravel.png'),
-      //   desc: '自由行'
-      // }, {
-      //   id: '0008',
-      //   imgUrl: require('../../../assets/image/lowFlight.png'),
-      //   desc: '低价机票'
-      // }, {
-      //   id: '0009',
-      //   imgUrl: require('../../../assets/image/lowFlight.png'),
-      //   desc: '低价机票'
-      // }]
-    }
-  },
+  // data () {
+  //   return {
+  //     // iconList: [{
+  //     //   id: '0001',
+  //     //   imgUrl: require('../../../assets/image/writeTxt.png'),
+  //     //   // vue-cli与webpack本地静态路径出错导致图片不显示,通过require解决
+  //     //   desc: '酒店'
+  //     // }, {
+  //     //   id: '0002',
+  //     //   imgUrl: require('../../../assets/image/bus.png'),
+  //     //   desc: '机票'
+  //     // }, {
+  //     //   id: '0003',
+  //     //   imgUrl: require('../../../assets/image/freeTravel.png'),
+  //     //   desc: '火车票'
+  //     // }, {
+  //     //   id: '0004',
+  //     //   imgUrl: require('../../../assets/image/lowFlight.png'),
+  //     //   desc: '景点门票'
+  //     // }, {
+  //     //   id: '0005',
+  //     //   imgUrl: require('../../../assets/image/writeTxt.png'),
+  //     //   desc: '攻略'
+  //     // }, {
+  //     //   id: '0006',
+  //     //   imgUrl: require('../../../assets/image/bus.png'),
+  //     //   desc: '汽车票船票'
+  //     // }, {
+  //     //   id: '0007',
+  //     //   imgUrl: require('../../../assets/image/freeTravel.png'),
+  //     //   desc: '自由行'
+  //     // }, {
+  //     //   id: '0008',
+  //     //   imgUrl: require('../../../assets/image/lowFlight.png'),
+  //     //   desc: '低价机票'
+  //     // }, {
+  //     //   id: '0009',
+  //     //   imgUrl: require('../../../assets/image/lowFlight.png'),
+  //     //   desc: '低价机票'
+  //     // }]
+  //   }
+  // },
   computed: {
     // 计算属性,将九个图片的一维数组拆分成二维数组。    分页器算法
     // eslint-disable-next-line vue/return-in-computed-property
