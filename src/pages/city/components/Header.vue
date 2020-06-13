@@ -1,7 +1,7 @@
 <template>
     <!-- 城市选择 -->
     <div class="header">
-        城市选择
+        国内城市选择
         <router-link to="/">
         <!-- 点击跳转到首页 -->
             <div class="iconfont header-back">&#xe624;</div>
